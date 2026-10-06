@@ -1,0 +1,290 @@
+.hotel-form-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(25, 20, 55, 0.62);
+  backdrop-filter: blur(5px);
+  overflow-y: auto;
+}
+
+.hotel-form-modal {
+  position: relative;
+  width: 100%;
+  max-width: 620px;
+  max-height: 92vh;
+  overflow-y: auto;
+  padding: 32px;
+  border-radius: 22px;
+  background: #ffffff;
+  box-shadow: 0 25px 80px rgba(28, 20, 75, 0.25);
+  color: #25234a;
+}
+
+.hotel-form-modal h2 {
+  margin: 0 40px 8px 0;
+  color: #25234a;
+  font-size: 27px;
+  font-weight: 800;
+}
+
+.hotel-form-subtitle {
+  margin: 0 0 25px;
+  color: #77758f;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.hotel-form-close {
+  position: absolute;
+  top: 17px;
+  right: 19px;
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  background: #f2efff;
+  color: #6c4df6;
+  font-size: 27px;
+  cursor: pointer;
+}
+
+.hotel-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+  margin-bottom: 18px;
+}
+
+.hotel-form-group label {
+  color: #302c53;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.hotel-form-group input:not([type="file"]),
+.hotel-form-group textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #e3e0f2;
+  border-radius: 10px;
+  outline: none;
+  background: #fcfbff;
+  color: #25234a;
+  font: inherit;
+  font-size: 14px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.hotel-form-group input:focus,
+.hotel-form-group textarea:focus {
+  border-color: #8a70fa;
+  box-shadow: 0 0 0 3px rgba(108, 77, 246, 0.12);
+}
+
+.hotel-form-group textarea {
+  resize: vertical;
+  min-height: 95px;
+}
+
+.hotel-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* Image upload area */
+.hotel-image-upload {
+  padding: 16px;
+  border: 1.5px dashed #c9bdfd;
+  border-radius: 14px;
+  background: #faf9ff;
+  text-align: center;
+}
+
+.hotel-image-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  padding: 12px 8px 18px;
+  color: #77758f;
+  font-size: 12px;
+}
+
+.hotel-image-placeholder strong {
+  color: #302c53;
+  font-size: 14px;
+}
+
+.hotel-upload-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 5px;
+  border-radius: 14px;
+  background: #eee9ff;
+  color: #6c4df6;
+  font-size: 28px;
+}
+
+.hotel-image-upload input[type="file"] {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto 12px;
+  color: #77758f;
+  font-size: 12px;
+}
+
+.hotel-image-choose {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 20px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #6c4df6, #ec4899);
+  color: #ffffff !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  cursor: pointer;
+}
+
+.hotel-image-preview-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.hotel-image-preview {
+  display: block;
+  width: 100%;
+  max-height: 230px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.hotel-image-remove {
+  padding: 8px 14px;
+  border: 1px solid #f3c3d8;
+  border-radius: 9px;
+  background: #fff4f8;
+  color: #c42f72;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.hotel-image-error {
+  margin: 9px 0 0;
+  color: #d6285c;
+  font-size: 12px;
+}
+
+.hotel-form-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.hotel-form-cancel,
+.hotel-form-save {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.hotel-form-cancel {
+  border: 1px solid #e4e0f1;
+  background: #ffffff;
+  color: #55516e;
+}
+
+.hotel-form-save {
+  background: linear-gradient(135deg, #6c4df6, #ec4899);
+  color: #ffffff;
+  box-shadow: 0 5px 15px rgba(108, 77, 246, 0.2);
+}
+
+.hotel-form-save:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.hotel-form-cancel:hover,
+.hotel-form-save:hover,
+.hotel-image-choose:hover {
+  filter: brightness(0.97);
+}
+
+@media (max-width: 600px) {
+  .hotel-form-overlay {
+    align-items: flex-start;
+    padding: 12px;
+  }
+
+  .hotel-form-modal {
+    max-height: none;
+    margin: auto 0;
+    padding: 24px 18px;
+    border-radius: 17px;
+  }
+
+  .hotel-form-modal h2 {
+    font-size: 23px;
+  }
+
+  .hotel-form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .hotel-form-buttons {
+    flex-direction: column-reverse;
+  }
+
+  .hotel-form-cancel,
+  .hotel-form-save {
+    width: 100%;
+  }
+}
+
+/* Hide the default browser file picker */
+.hotel-image-upload input[type="file"] {
+  display: none;
+}
+
+/* Keep the upload section clean */
+.hotel-image-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 22px 16px;
+}
+
+/* Make the modal fit the screen */
+.hotel-form-modal {
+  box-sizing: border-box;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+/* Make the upload button consistent */
+.hotel-image-choose {
+  margin-top: 4px;
+}
